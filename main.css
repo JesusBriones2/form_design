@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, #FFFDE4, #005AA7);
+}
+
+.form {
+    /* Efecto de glass */
+    background: #ffffff40;
+    box-shadow: 0 8px 32px 0 #1f26875e;
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid #ffffff2e;
+
+    --colorPrimary: #34347dcc;
+    --colorPrimaryHover: #34347d;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__image {
+    font-size: 5em;
+    color: var(--colorPrimary);
+    margin: 20px 0 30px;
+    transition: transform .3s;
+}
+
+.form__image:hover {
+    transform: scale(1.2);
+}
+
+.form__inputs {
+    width: 90%;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.form__icon {
+    color: var(--colorPrimary);
+    margin: 0 10px;
+}
+
+.form__inputs input {
+    font-size: 1em;
+    height: 100%;
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    padding-right: 10px;
+}
+
+.form__inputs:hover {
+    outline: 2px solid var(--colorPrimaryHover);
+}
+
+.form__inputs:has(>input:focus) {
+    outline: 2px solid var(--colorPrimary);
+}
+
+.form__options {
+    margin-top: 30px;
+    width: 90%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    user-select: none;
+}
+
+.form__options * {
+    cursor: pointer;
+}
+
+.form__options label {
+    display: flex;
+    align-items: center;
+}
+
+.form__options input {
+    --sizeCheckbox: 1.2em;
+    width: var(--sizeCheckbox);
+    height: var(--sizeCheckbox);
+    margin-right: 5px;
+
+}
+
+.form__forgot:hover {
+    text-decoration: underline;
+}
+
+
+.form__btn {
+    margin-top: 60px;
+    padding: 15px 40px;
+    border: none;
+    font-weight: 600;
+    background-color: var(--colorPrimary);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form__btn:hover {
+    background-color: var(--colorPrimaryHover);
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .form {
+        width: 100%;
+        background: none;
+        box-shadow: none;
+        backdrop-filter: blur( 0px );
+        -webkit-backdrop-filter: blur( 0px );
+        border: none;
+    }
+}
